@@ -1,6 +1,8 @@
 # Kong API Gateway at Digital Ocean App Plataform
 
-Example running kong as service at digital ocean app plaftorm via command line. This example require doctl configured.
+Example running kong (DB-LESS) as service at digital ocean app plataform. 
+
+doctl (digital ocean command-line) is required
 
 # Create APP 
 
