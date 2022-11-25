@@ -1,10 +1,7 @@
-# Kong Digital Ocean App Plataforma
+# Kong API Gateway at Digital Ocean App Plataform
 
-Example running kong on digital ocean app plaftorm via commandline
+Example running kong as service at digital ocean app plaftorm via command line. This example require doctl configured.
 
-
-# Clone
-
-# RUN 
+# Create APP 
 
     doctl a create --spec .do/app.yaml
