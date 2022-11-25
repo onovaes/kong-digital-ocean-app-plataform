@@ -1,0 +1,30 @@
+name: kong-app
+region: nyc
+services:
+- envs:
+  - key: KONG_DATABASE
+    scope: RUN_AND_BUILD_TIME
+    value: "off"
+  - key: KONG_PROXY_ACCESS_LOG
+    scope: RUN_AND_BUILD_TIME
+    value: /dev/stdout
+  - key: KONG_ADMIN_ACCESS_LOG
+    scope: RUN_AND_BUILD_TIME
+    value: /dev/stdout
+  - key: KONG_PROXY_ERROR_LOG
+    scope: RUN_AND_BUILD_TIME
+    value: /dev/stderr
+  - key: KONG_ADMIN_ERROR_LOG
+    scope: RUN_AND_BUILD_TIME
+    value: /dev/stderr
+  http_port: 8000
+  image:
+    registry: kong
+    registry_type: DOCKER_HUB
+    repository: kong-gateway
+    tag: 3.0.1.0
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: kong-kong-gateway
+  routes:
+  - path: /
